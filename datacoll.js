@@ -25,12 +25,12 @@ let cell = [];
 
 for (let k of csvString) {
     if (k === '\n') {
-        row.push(cell);
+        row.push(cell.join(''));
         rows.push(row);
         row = [];
         cell = [];
     } else if (k === ',') {
-        row.push(cell);
+        row.push(cell.join(''));
         cell = [];
     } else {
         cell.push(k);
