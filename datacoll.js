@@ -22,3 +22,19 @@ let numOfColumns = commaCounter + 1;
 let rows = [];
 let row = [];
 let cell = [];
+
+for (let k of csvString) {
+    if (k === '\n') {
+        row.push(cell);
+        rows.push(row);
+        row = [];
+        cell = [];
+    } else if (k === ',') {
+        row.push(cell);
+        cell = [];
+    } else {
+        cell.push(k);
+    }
+}
+
+console.log(rows);
