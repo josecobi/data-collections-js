@@ -30,8 +30,9 @@ console.log(rows);
 
 //Part 3: Transforming Data
 const object = {};
+for(let j = 1; j < rows.length; j++)
 for(let i = 0; i < rows[0].length; i++){
     
-    object[rows[0][i].toLowerCase()] =  '';
+    object[rows[0][i].toLowerCase()] =  rows[j][i];
 }
 console.log(object);
