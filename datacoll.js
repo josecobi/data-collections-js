@@ -27,6 +27,8 @@ rows.push(row);
 console.log(rows);
 
 //Part 3: Transforming Data
+console.log(`>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Part 3: Transforming Data<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<`)
+
 let headers = rows[0];
 
 let newArray = [];
@@ -39,13 +41,11 @@ for(let rowInArray = 1; rowInArray < rows.length; rowInArray++){
     }
     newArray.push(object);
 }
-console.log(`\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Part 3: Transforming Data<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+console.log(newArray);
 
-The new array is:
- ${newArray}`);
 
 //Part 4: Sorting and Manipulating Data
-
+console.log(`\n>>>>>>>>>>>>>>>>>>>>>>>>Part 4: Sorting and Manipulating Data<<<<<<<<<<<<<<<<<<<<<<<<<<<<`);
 newArray.pop();
 
 
@@ -53,7 +53,7 @@ newArray.splice(1, 0, { id: "48", name: "Barry", occupation: "Runner", age: "25"
 
 
 newArray.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
-console.log(newArray);
+
 
 
 let sumOfAge = 0;
@@ -62,9 +62,7 @@ for(let k of newArray){
 }
 
 let averageAge = sumOfAge / newArray.length;
-console.log(`\n>>>>>>>>>>>>>>>>>>>>>>>>Part 4: Sorting and Manipulating Data<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-The average age is: 
+console.log(`\nThe average age is: 
 ${averageAge}`);
 
 //Part 5: Full Circle
