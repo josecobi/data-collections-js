@@ -47,3 +47,6 @@ console.log(newArray);
 
 newArray.pop();
 console.log(newArray);
+
+newArray[1] = { id: "48", name: "Barry", occupation: "Runner", age: "25" };
+console.log(newArray);
