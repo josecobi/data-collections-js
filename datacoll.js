@@ -2,8 +2,6 @@ console.log("\n>>>>>>>>>>>>>>>>>>>>Part 2: Refactoring Old Code<<<<<<<<<<<<<<<<<
 
 const csvString = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor's Assistant,26";
 
-
-
 let rows = [];
 let row = [];
 let cell = [];
@@ -41,12 +39,56 @@ for(let rowInArray = 1; rowInArray < rows.length; rowInArray++){
     }
     newArray.push(object);
 }
-console.log(newArray);
+console.log(`\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Part 3: Transforming Data<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+The new array is:
+ ${newArray}`);
 
 //Part 4: Sorting and Manipulating Data
 
 newArray.pop();
+
+
+newArray.splice(1, 0, { id: "48", name: "Barry", occupation: "Runner", age: "25" });
+
+
+newArray.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
 console.log(newArray);
 
-newArray[1] = { id: "48", name: "Barry", occupation: "Runner", age: "25" };
-console.log(newArray);
+
+let sumOfAge = 0;
+for(let k of newArray){
+    sumOfAge += parseInt(k.age);
+}
+
+let averageAge = sumOfAge / newArray.length;
+console.log(`\n>>>>>>>>>>>>>>>>>>>>>>>>Part 4: Sorting and Manipulating Data<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+The average age is: 
+${averageAge}`);
+
+//Part 5: Full Circle
+let finalArray = [];
+let keysArray = Object.keys(newArray[0]);
+
+finalArray.push(keysArray);
+
+let rowArray=[]
+for(let i = 0; i < newArray.length; i++){
+
+    finalArray.push(Object.values(newArray[i]));
+        
+
+    }
+  
+
+let NewCsvString = '';
+
+for (let row of finalArray) {
+    NewCsvString += row.join(',') + '\n';
+}
+
+console.log(`\n>>>>>>>>>>>>>>>>>>>>>>>Part 5: Full Circle<<<<<<<<<<<<<<<<<
+
+The new csv string is:
+${NewCsvString}`);
