@@ -29,10 +29,16 @@ rows.push(row);
 console.log(rows);
 
 //Part 3: Transforming Data
-const object = {};
-for(let j = 1; j < rows.length; j++)
-for(let i = 0; i < rows[0].length; i++){
-    
-    object[rows[0][i].toLowerCase()] =  rows[j][i];
+let headers = rows[0];
+
+let newArray = [];
+
+for(let rowInArray = 1; rowInArray < rows.length; rowInArray++){
+    let object = {};
+    for(let column = 0; column < rows[0].length; column++){
+        
+        object[headers[column].toLowerCase()] = rows[rowInArray][column];   
+    }
+    newArray.push(object);
 }
-console.log(object);
+console.log(newArray);
