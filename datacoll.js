@@ -42,3 +42,8 @@ for(let rowInArray = 1; rowInArray < rows.length; rowInArray++){
     newArray.push(object);
 }
 console.log(newArray);
+
+//Part 4: Sorting and Manipulating Data
+
+newArray.pop();
+console.log(newArray);
