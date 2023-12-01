@@ -54,7 +54,7 @@ newArray.splice(1, 0, { id: "48", name: "Barry", occupation: "Runner", age: "25"
 
 newArray.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
 
-
+console.log("The new Array is: ", newArray);
 
 let sumOfAge = 0;
 for(let k of newArray){
@@ -66,19 +66,16 @@ console.log(`\nThe average age is:
 ${averageAge}`);
 
 //Part 5: Full Circle
+console.log(`\n>>>>>>>>>>>>>>>>>>>>>>>Part 5: Full Circle<<<<<<<<<<<<<<<<<`);
 let finalArray = [];
 let keysArray = Object.keys(newArray[0]);
 
 finalArray.push(keysArray);
 
-let rowArray=[]
+
 for(let i = 0; i < newArray.length; i++){
-
     finalArray.push(Object.values(newArray[i]));
-        
-
-    }
-  
+    } 
 
 let NewCsvString = '';
 
@@ -86,7 +83,5 @@ for (let row of finalArray) {
     NewCsvString += row.join(',') + '\n';
 }
 
-console.log(`\n>>>>>>>>>>>>>>>>>>>>>>>Part 5: Full Circle<<<<<<<<<<<<<<<<<
-
-The new csv string is:
+console.log(`\nThe new csv string is:
 ${NewCsvString}`);
