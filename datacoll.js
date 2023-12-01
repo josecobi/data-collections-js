@@ -27,3 +27,11 @@ row.push(cell.join(''));
 rows.push(row);
 
 console.log(rows);
+
+//Part 3: Transforming Data
+const object = {};
+for(let i = 0; i < rows[0].length; i++){
+    
+    object[rows[0][i].toLowerCase()] =  '';
+}
+console.log(object);
